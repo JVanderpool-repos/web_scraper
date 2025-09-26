@@ -1,0 +1,90 @@
+# Web Scraper Configuration
+
+# Request Settings
+request:
+  delay: 1.0                    # Delay between requests (seconds)
+  max_retries: 3                # Maximum retry attempts
+  timeout: 30                   # Request timeout (seconds)
+  random_delay: true            # Add random variation to delay
+  delay_variation: 0.5          # Maximum delay variation (multiplier)
+
+# Rate Limiting
+rate_limiting:
+  requests_per_second: 1
+  requests_per_minute: 60
+  requests_per_hour: 3600
+  burst_size: 5
+
+# Headers
+headers:
+  user_agent_rotation: true     # Rotate user agents
+  accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+  accept_language: "en-US,en;q=0.9"
+  accept_encoding: "gzip, deflate, br"
+  connection: "keep-alive"
+  dnt: "1"                      # Do Not Track
+
+# Selenium Settings
+selenium:
+  browser: "chrome"             # chrome or firefox
+  headless: true                # Run in headless mode
+  window_size: [1920, 1080]
+  page_load_timeout: 30
+  implicit_wait: 10
+  enable_images: false          # Disable image loading for speed
+  enable_javascript: true
+
+# Data Extraction
+extraction:
+  remove_scripts: true          # Remove script tags
+  remove_styles: true           # Remove style tags
+  clean_whitespace: true        # Clean extra whitespace
+  extract_links: true           # Extract all links
+  extract_images: true          # Extract image URLs
+  extract_meta: true            # Extract meta tags
+  max_text_length: 10000        # Maximum text content length
+
+# Output Settings
+output:
+  default_format: "json"        # Default output format
+  pretty_print: true            # Pretty print JSON
+  timestamp_format: "%Y-%m-%d %H:%M:%S"
+  include_metadata: true        # Include scraping metadata
+  
+# Logging
+logging:
+  level: "INFO"                 # DEBUG, INFO, WARNING, ERROR
+  log_requests: true            # Log individual requests
+  log_responses: false          # Log response content (verbose)
+  file_rotation: true           # Rotate log files
+  max_file_size: "10MB"
+  backup_count: 5
+
+# Storage
+storage:
+  data_directory: "data"
+  logs_directory: "logs"
+  auto_create_dirs: true
+  backup_existing: true
+
+# Error Handling
+error_handling:
+  retry_on_timeout: true
+  retry_on_connection_error: true
+  retry_on_http_error: [500, 502, 503, 504]
+  exponential_backoff: true
+  max_backoff_time: 60
+
+# Respect Settings
+respect:
+  robots_txt: true              # Check robots.txt
+  crawl_delay: true             # Respect crawl-delay directive
+  max_concurrent: 10            # Maximum concurrent requests
+  
+# Proxy Settings (optional)
+proxy:
+  enabled: false
+  rotation: true
+  http_proxy: null
+  https_proxy: null
+  proxy_list_file: null

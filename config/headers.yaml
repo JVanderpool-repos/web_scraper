@@ -1,0 +1,103 @@
+# HTTP Headers Configuration
+
+# Common User Agents
+user_agents:
+  chrome_windows:
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
+  
+  chrome_mac:
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+  
+  firefox:
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/121.0"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/121.0"
+    - "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/121.0"
+  
+  safari:
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15"
+
+# Default Headers for Different Content Types
+default_headers:
+  html:
+    Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+    Accept-Language: "en-US,en;q=0.9"
+    Accept-Encoding: "gzip, deflate, br"
+    Connection: "keep-alive"
+    Upgrade-Insecure-Requests: "1"
+    Sec-Fetch-Dest: "document"
+    Sec-Fetch-Mode: "navigate"
+    Sec-Fetch-Site: "none"
+    Sec-Fetch-User: "?1"
+  
+  json:
+    Accept: "application/json, text/plain, */*"
+    Content-Type: "application/json"
+    Accept-Language: "en-US,en;q=0.9"
+    Accept-Encoding: "gzip, deflate, br"
+  
+  ajax:
+    Accept: "application/json, text/javascript, */*; q=0.01"
+    X-Requested-With: "XMLHttpRequest"
+    Accept-Language: "en-US,en;q=0.9"
+    Accept-Encoding: "gzip, deflate, br"
+
+# Site-specific Headers (examples)
+site_specific:
+  amazon:
+    Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+    Accept-Language: "en-US,en;q=0.5"
+    Accept-Encoding: "gzip, deflate"
+    Connection: "keep-alive"
+    Upgrade-Insecure-Requests: "1"
+    
+  linkedin:
+    Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+    Accept-Language: "en-US,en;q=0.9"
+    Accept-Encoding: "gzip, deflate, br"
+    Connection: "keep-alive"
+    Sec-Fetch-Dest: "document"
+    Sec-Fetch-Mode: "navigate"
+    Sec-Fetch-Site: "none"
+    
+  google:
+    Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+    Accept-Language: "en"
+    Accept-Encoding: "gzip, deflate"
+    Connection: "keep-alive"
+
+# Mobile Headers
+mobile_headers:
+  iphone:
+    User-Agent: "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1"
+    Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+    Accept-Language: "en-US,en;q=0.9"
+    Accept-Encoding: "gzip, deflate"
+    
+  android:
+    User-Agent: "Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
+    Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+    Accept-Language: "en-US,en;q=0.9"
+    Accept-Encoding: "gzip, deflate"
+
+# Security Headers
+security_headers:
+  dnt: "1"                      # Do Not Track
+  sec_gpc: "1"                  # Global Privacy Control
+  
+# Custom Headers for Specific Use Cases
+ecommerce_headers:
+  Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+  Accept-Language: "en-US,en;q=0.9"
+  Accept-Encoding: "gzip, deflate, br"
+  Connection: "keep-alive"
+  Cache-Control: "no-cache"
+  Pragma: "no-cache"
+
+api_headers:
+  Accept: "application/json"
+  Content-Type: "application/json"
+  Accept-Encoding: "gzip, deflate, br"

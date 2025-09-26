@@ -1,0 +1,57 @@
+# Web Scraper Project Requirements
+# 
+# This file contains all dependencies for the web scraper framework.
+# 
+# To set up the environment:
+# 1. Create virtual environment: python -m venv venv
+# 2. Activate it:
+#    - Windows: .\venv\Scripts\Activate.ps1
+#    - Linux/Mac: source venv/bin/activate
+# 3. Install requirements: pip install -r requirements.txt
+#
+# Or use the setup scripts:
+# - Windows: .\setup_venv.ps1
+# - Linux/Mac: ./setup_venv.sh
+
+# ===== Core Web Scraping Dependencies =====
+requests>=2.31.0                 # HTTP requests library
+beautifulsoup4>=4.12.0           # HTML/XML parsing
+lxml>=4.9.0                      # Fast XML/HTML parser
+selenium>=4.15.0                 # Web browser automation
+scrapy>=2.11.0                   # Advanced web crawling framework
+
+# ===== Data Processing =====
+pandas>=2.0.0                    # Data manipulation and analysis
+numpy>=1.24.0                    # Numerical computing
+
+# ===== Configuration and Logging =====
+pyyaml>=6.0                      # YAML configuration files
+python-dotenv>=1.0.0             # Environment variables from .env
+
+# ===== Database Support =====
+sqlalchemy>=2.0.0                # SQL toolkit and ORM
+pymongo>=4.5.0                   # MongoDB driver
+
+# ===== Asynchronous Support =====
+aiohttp>=3.8.0                   # Async HTTP client/server
+# Note: asyncio is built into Python 3.4+
+
+# ===== Web Scraping Utilities =====
+fake-useragent>=1.4.0            # Random user agent generation
+requests[socks]>=2.31.0          # SOCKS proxy support
+ratelimit>=2.2.1                 # Rate limiting decorators
+
+# ===== User Interface & Progress =====
+tqdm>=4.66.0                     # Progress bars
+
+# ===== Optional: Advanced Parsing =====
+selectolax>=0.3.17               # Fast HTML5 parser (C-based)
+pyquery>=2.0.0                   # jQuery-like syntax for Python
+
+# ===== System Monitoring =====
+psutil>=5.9.0                    # System and process utilities
+
+# ===== Development Dependencies (Optional) =====
+# pytest>=7.4.0                  # Testing framework
+# black>=23.0.0                  # Code formatter
+# flake8>=6.0.0                  # Code linting

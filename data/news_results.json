@@ -1,0 +1,64 @@
+[
+  {
+    "url": "https://quotes.toscrape.com/",
+    "status_code": 200,
+    "success": true,
+    "data": {
+      "articles": [],
+      "headlines": [
+        {
+          "title": "Quotes to Scrape",
+          "link": "/"
+        },
+        {
+          "title": "Top Ten tags",
+          "link": null
+        }
+      ],
+      "publication_info": {},
+      "categories": [],
+      "total_articles": 0,
+      "total_headlines": 2,
+      "unique_categories": []
+    },
+    "timestamp": "2025-09-26T10:32:22.367915",
+    "error_message": null
+  },
+  {
+    "url": "https://books.toscrape.com/",
+    "status_code": 200,
+    "success": true,
+    "data": {
+      "articles": [
+        {
+          "title": "A Light in the ...",
+          "url": "catalogue/a-light-in-the-attic_1000/index.html"
+        },
+        {
+          "title": "Tipping the Velvet",
+          "url": "catalogue/tipping-the-velvet_999/index.html"
+        },
+        {
+          "title": "Soumission",
+          "url": "catalogue/soumission_998/index.html"
+        },
+        {
+          "title": "Sharp Objects",
+          "url": "catalogue/sharp-objects_997/index.html"
+        },
+        {
+          "title": "Sapiens: A Brief History ...",
+          "url": "catalogue/sapiens-a-brief-history-of-humankind_996/index.html"
+        }
+      ],
+      "headlines": [],
+      "publication_info": {},
+      "categories": [],
+      "total_articles": 5,
+      "total_headlines": 0,
+      "unique_categories": []
+    },
+    "timestamp": "2025-09-26T10:32:25.837698",
+    "error_message": null
+  }
+]
